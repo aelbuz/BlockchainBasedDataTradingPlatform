@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yüklediğim Veriler</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="css/UserPanel.css" rel="stylesheet" />
+    <link href="css/jquery-ui.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="adjust-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/trade-icon-transparent-0.jpg" width="64" height="64" />
+                    </a>
+                </div>
+
+                <span class="logout-spn">
+                    <div id="userAddress" style="color:#fff; font-size: medium;"></div>
+                    <div id="userBalance" style="color:#fff; font-size: medium; text-align: right;"></div>
+                </span>
+            </div>
+        </div>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <a href="index.html"><i class="fa fa-desktop"></i>Kullanıcı Paneli</a>
+                    </li>
+
+                    <li class="active-link">
+                        <a href="myData.html"><i class="fa fa-save"></i>Yüklediğim Veriler</a>
+                    </li>
+
+                    <li>
+                        <a href="createDataRecord.html"><i class="fa fa-edit"></i>Veri Kaydı Oluştur</a>
+                    </li>
+
+                    <li>
+                        <a href="platformData.html"><i class="fa fa-database"></i>Platformdaki Veriler</a>
+                    </li>
+
+                    <li>
+                        <a href="purchasedData.html"><i class="fa fa-credit-card"></i>Satın Aldığım Veriler</a>
+                    </li>
+
+                    <li>
+                        <a href="purchaseRequestsSent.html"><i class="fa fa-arrow-up"></i>Gönderilen Taleplerim</a>
+                    </li>
+
+                    <li>
+                        <a href="purchaseRequestsReceived.html"><i class="fa fa-arrow-down"></i>Alınan Taleplerim</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner" style="min-height: 500px;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>YÜKLEDİĞİM VERİLER</h2>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="form-group row">
+                    <div class="col-lg-12">
+                        <table id="myDataRecordsListBody" class="table table-bordered">
+                            <tr style="background-color: lightgray;">
+                                <th style="width: 40px;">#</th>
+                                <th style="width: 200px;">Başlık</th>
+                                <th>Üst Veri</th>
+                                <th style="width: 110px;">Ücret (ETH)</th>
+                                <th style="width: 40px;">İşlemler</th>
+                            </tr>
+                            <tr class="myDataRecordTemplate" style="display: none;">
+                                <td class="myDataRecordId"></td>
+                                <td class="myDataRecordTitle"></td>
+                                <td class="myDataRecordMetadata"></td>
+                                <td class="myDataRecordPrice"></td>
+                                <td>
+                                    <button class="btn btn-info" id="btnShowDataDetails"
+                                        onclick="App.showDataDetails(this)" style="padding: 1px;">Detay</button>
+                                    <div id="dialog" title="Veri Detay" style="display: none; background-color: seashell;">
+                                        <div class="row col-lg-12">
+                                            <label class="col-sm-3">Veri ID:</label>
+                                            <div class="col-sm-9" id="dataRecordDetailDataId"></div>
+                                        </div>
+                                        <div class="row col-lg-12">
+                                            <label class="col-sm-3">Başlık:</label>
+                                            <div class="col-sm-9" id="dataRecordDetailDataTitle"></div>
+                                        </div>
+                                        <div class="row col-lg-12">
+                                            <label class="col-sm-3">Üst Veri:</label>
+                                            <div class="col-sm-9" id="dataRecordDetailDataMetadata"></div>
+                                        </div>
+                                        <div class="row col-lg-12">
+                                            <label class="col-sm-3">Kanıt:</label>
+                                            <div class="col-sm-9" id="dataRecordDetailDataProof"></div>
+                                        </div>
+                                        <div class="row col-lg-12">
+                                            <label class="col-sm-3">Ücret (ETH):</label>
+                                            <div class="col-sm-9" id="dataRecordDetailDataPrice"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="col-lg-12">
+                &copy; 2021 Blok Zinciri Tabanlı Veri Ticaret Platformu
+            </div>
+        </div>
+    </div>
+
+    <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="js/UserPanel.js"></script>
+    <script src="js/appMyData.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+</body>
+
+</html>

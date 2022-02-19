@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veri Ticaret Platformu</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="css/UserPanel.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="adjust-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/trade-icon-transparent-0.jpg" width="64" height="64" />
+                    </a>
+                </div>
+
+                <span class="logout-spn">
+                    <div id="userAddress" style="color:#fff; font-size: medium;"></div>
+                    <div id="userBalance" style="color:#fff; font-size: medium; text-align: right;"></div>
+                </span>
+            </div>
+        </div>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="active-link">
+                        <a href="index.html"><i class="fa fa-desktop"></i>Kullanıcı Paneli</a>
+                    </li>
+
+                    <li>
+                        <a href="myData.html"><i class="fa fa-save"></i>Yüklediğim Veriler</a>
+                    </li>
+
+                    <li>
+                        <a href="createDataRecord.html"><i class="fa fa-edit"></i>Veri Kaydı Oluştur</a>
+                    </li>
+
+                    <li>
+                        <a href="platformData.html"><i class="fa fa-database"></i>Platformdaki Veriler</a>
+                    </li>
+
+                    <li>
+                        <a href="purchasedData.html"><i class="fa fa-credit-card"></i>Satın Aldığım Veriler</a>
+                    </li>
+
+                    <li>
+                        <a href="purchaseRequestsSent.html"><i class="fa fa-arrow-up"></i>Gönderilen Taleplerim</a>
+                    </li>
+
+                    <li>
+                        <a href="purchaseRequestsReceived.html"><i class="fa fa-arrow-down"></i>Alınan Taleplerim</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>VERİ TİCARET PLATFORMU KULLANICI PANELİ</h2>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row text-center pad-top">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                        <div class="div-square">
+                            <a href="myData.html">
+                                <i class="fa fa-save fa-4x"></i>
+                                <h4>Yüklediğim Veriler</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                        <div class="div-square">
+                            <a href="createDataRecord.html">
+                                <i class="fa fa-edit fa-4x"></i>
+                                <h4>Veri Kaydı Oluştur</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                        <div class="div-square">
+                            <a href="platformData.html">
+                                <i class="fa fa-database fa-4x"></i>
+                                <h4>Platformdaki Veriler</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                        <div class="div-square">
+                            <a href="purchasedData.html">
+                                <i class="fa fa-credit-card fa-4x"></i>
+                                <h4>Satın Aldığım Veriler</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                        <div class="div-square">
+                            <a href="purchaseRequestsSent.html">
+                                <i class="fa fa-arrow-up fa-4x"></i>
+                                <h4>Gönderilen Taleplerim</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                        <div class="div-square">
+                            <a href="purchaseRequestsReceived.html">
+                                <i class="fa fa-arrow-down fa-4x"></i>
+                                <h4>Alınan Taleplerim</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="col-lg-12">
+                &copy; 2021 Blok Zinciri Tabanlı Veri Ticaret Platformu
+            </div>
+        </div>
+    </div>
+
+    <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="js/UserPanel.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/truffle-contract.js"></script>
+
+</body>
+
+</html>

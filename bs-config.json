@@ -1,0 +1,12 @@
+{
+    "server": {
+      "baseDir": [
+        "./tradingPlatform",
+        "./tradingPlatform/js",
+        "./build/contracts"
+      ],
+      "routes": {
+        "/vendor": "./node_modules"
+      }
+    }
+  }
