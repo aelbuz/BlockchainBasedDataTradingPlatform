@@ -18,6 +18,8 @@ Platform language is **Turkish**.
 
 **Note 2:** Web3.js also requires **MetaMask Legacy Web3** extension as well as MetaMask. This extension was removed from Google Chrome Store but not Firefox. If you want to use it with Chrome, download and install with this extension ID: `dgoegggfhkapjphahmgihfgemkgecdgl`
 
+**Note 3:** Do not forget to install required packages with `npm install` command after you downloaded the source code.
+
 **1.** Download and install [Node.js](https://nodejs.org/en/).  
 **2.** Install Truffle and Solidity  with `npm install -g truffle@5.0.2` command through the command line.  
 **3.** Install Ganache.  
