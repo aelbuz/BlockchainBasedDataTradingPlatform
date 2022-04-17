@@ -5,9 +5,6 @@ contract DataRecords
     uint public dataRecordCount = 0;
     uint public requestCount = 0;
 
-    // address dummySeller = (0xA822d12D8548EbC3036e707FA2FE9936fAC876fb);
-    // address dummyBuyer = (0xda2E10E69a16B398C63b47E2C8C5aE2654AB3B45);
-
     struct DataRecord
     {
         uint id;
@@ -19,17 +16,6 @@ contract DataRecords
     }
     
     mapping(uint => DataRecord) public records;
-
-    constructor() public {
-        // createDataRecord(dummySeller, "Başlık 1", "Üst veri 1", "Özet 1", 1);
-        // createDataRecord(dummySeller, "Başlık 2", "Üst veri 2", "Özet 2", 2);
-        // createDataRecord(dummyBuyer, "Başlık 3", "Üst veri 3", "Özet 3", 3);
-        // createDataRecord(dummyBuyer, "Başlık 4", "Üst veri 4", "Özet 4", 4);
-        // createDataPurchaseRequest(3, dummySeller, dummyBuyer);
-        // createDataPurchaseRequest(4, dummySeller, dummyBuyer);
-        // createDataPurchaseRequest(1, dummyBuyer, dummySeller);
-        // createDataPurchaseRequest(2, dummyBuyer, dummySeller);
-    }
 
     function createDataRecord(address _sellerId, string memory _title, string memory _metadata, string memory _proof, uint _price) public
     {
